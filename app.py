@@ -79,5 +79,5 @@ def api_mongo_insert():
         return redirect(url_for('api_root'))
 
 
-
-app.run(port=35080)
+if __name__ == "__main__":
+    app.run()
