@@ -11,8 +11,10 @@ import pymongo
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
+MONGODB_URL ='mongodb+srv://dbUser:password123098@cluster0.4any4.mongodb.net/saanika_practice?retryWrites=true&w=majority'
+
 def create_mongo_session(database, collection):
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient(MONGODB_URL)
     db = client[database]
     col = db[collection]
     return db, col
